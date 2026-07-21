@@ -110,7 +110,11 @@ button{font-family:inherit}
   padding:0 20px; background:color-mix(in srgb,var(--panel) 82%,transparent);
   backdrop-filter:blur(12px); border-bottom:1px solid var(--line);
 }
-.brand{display:flex;align-items:center;gap:11px;font-weight:700}
+.brand{display:flex;align-items:center;gap:11px;font-weight:700;
+  border:none;background:none;padding:0;margin:0;cursor:pointer;font-family:inherit;color:inherit;
+  border-radius:8px;transition:opacity .18s ease}
+.brand:hover{opacity:.72}
+.brand:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .brand .dxc-logo{display:flex;align-items:center}
 .brand .dxc-logo svg{height:21px;width:auto;display:block}
 .brand .logo-light{display:none}
@@ -458,7 +462,7 @@ body{animation:pageIn .5s ease}
 <body>
 
 <div id="topbar">
-  <div class="brand"><span class="dxc-logo logo-dark"><svg width="1199" height="240" viewBox="0 0 1199 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <button class="brand" data-go="0" title="Back to start" aria-label="Restart the playbook"><span class="dxc-logo logo-dark"><svg width="1199" height="240" viewBox="0 0 1199 240" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M858.235 134.702V110.634H863.561V134.702H858.235Z" fill="#0E1020"/>
 <path d="M869.577 134.702V110.634H877.156L884.086 124.153L886.271 128.932H886.305L888.49 124.153L895.42 110.634H902.999V134.702H897.912V116.369L895.693 120.841L888.558 134.702H884.018L880.945 128.727L876.849 120.841L874.664 116.369V134.702H869.577Z" fill="#0E1020"/>
 <path d="M909.023 134.702V110.634H925.307C930.906 110.634 934.149 113.331 934.149 118.486C934.149 123.675 930.871 126.338 925.307 126.338H914.348V134.702H909.023ZM924.351 122.173C927.15 122.173 928.584 120.91 928.584 118.486C928.584 116.062 927.15 114.799 924.351 114.799H914.348V122.173H924.351Z" fill="#0E1020"/>
@@ -524,7 +528,7 @@ body{animation:pageIn .5s ease}
 <stop offset="1" stop-color="#6399F0"/>
 </radialGradient>
 </defs>
-</svg></span><span class="sep"></span><span class="oasis">OASIS</span><span class="tag">The Playbook</span></div>
+</svg></span><span class="sep"></span><span class="oasis">OASIS</span><span class="tag">The Playbook</span></button>
   <div class="spacer"></div>
   <span class="chip-int"><span class="dot"></span><span class="chip-text">Interactive — click, don't just watch</span></span>
   <button class="iconbtn" id="themebtn" title="Toggle light / dark theme" aria-label="Toggle light or dark theme">◐</button>
