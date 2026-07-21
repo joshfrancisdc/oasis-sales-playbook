@@ -384,6 +384,41 @@ small.src{display:block;margin-top:14px;font-size:11.5px;color:var(--faint);font
   .spine .step::after{display:none}
   #rail .dots{display:none}
 }
+/* ---------- Phone ---------- */
+@media(max-width:560px){
+  html{-webkit-text-size-adjust:100%}
+  #topbar{gap:8px;padding:0 12px}
+  .brand{gap:7px;min-width:0}
+  .brand .dxc-logo svg{height:17px;flex:none}
+  .brand .sep{display:none}
+  .brand .oasis{font-size:12px}
+  .brand .tag{display:none}
+  .chip-int{padding:3px;gap:0;border-radius:50%;width:26px;height:26px;justify-content:center;flex:none}
+  .chip-int .chip-text{display:none}
+  .chip-int .dot{width:7px;height:7px}
+  .iconbtn{flex:none;width:38px;height:38px}
+  #rail{padding:0 12px;gap:6px}
+  .navbtn{flex:none;height:44px;padding:0 14px;font-size:12.5px}
+  #count{display:none}
+  .slide{padding:16px;padding-bottom:88px}
+  h1{font-size:clamp(26px,8vw,34px)}
+  h2{font-size:clamp(21px,6.5vw,28px)}
+  .g3{grid-template-columns:1fr}
+  .cover-logo svg,.brand .dxc-logo svg{max-width:100%}
+  /* product mock chrome: collapse to fit a phone, same governance content */
+  .app-nav{flex-wrap:nowrap;gap:4px;padding:8px 10px}
+  .app-nav .tenant{padding:3px 7px;font-size:10.5px;max-width:110px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
+  .app-nav .ntab:not(.on){display:none}
+  .app-nav .ntab.on{font-size:10.5px;padding:3px 7px}
+  .app-nav .clock{display:none}
+  .dash{max-height:none}
+  .chat-log{min-height:180px}
+  .app{min-height:0}
+  .pbtn{height:38px;font-size:12px}
+  .plan-actions{flex-wrap:wrap;row-gap:8px}
+  .playbtn{min-height:40px}
+  .fu{min-height:38px}
+}
 .fade-seq>*{opacity:0;transform:translateY(10px);animation:rise .5s ease forwards}
 .fade-seq>*:nth-child(1){animation-delay:.05s}.fade-seq>*:nth-child(2){animation-delay:.15s}
 .fade-seq>*:nth-child(3){animation-delay:.25s}.fade-seq>*:nth-child(4){animation-delay:.35s}
@@ -481,7 +516,7 @@ body{animation:pageIn .5s ease}
 </defs>
 </svg></span><span class="sep"></span><span class="oasis">OASIS</span><span class="tag">The Playbook</span></div>
   <div class="spacer"></div>
-  <span class="chip-int"><span class="dot"></span>Interactive — click, don't just watch</span>
+  <span class="chip-int"><span class="dot"></span><span class="chip-text">Interactive — click, don't just watch</span></span>
   <button class="iconbtn" id="themebtn" title="Toggle light / dark theme" aria-label="Toggle light or dark theme">◐</button>
 </div>
 
