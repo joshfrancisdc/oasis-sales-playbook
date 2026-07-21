@@ -856,7 +856,66 @@ slides.push({nav:'TAM', html:`
   </div>
 </section>`});
 
-/* ---------- 7. WHY DIFFERENT ---------- */
+/* ---------- 7. SUPPORT ---------- */
+slides.push({nav:'Support', html:`
+<section class="slide">
+  <div class="wrap">
+    <div class="eyebrow"><b>Delivering OASIS</b> · Support Methodology</div>
+    <h2>Support doesn't stop at go-live.</h2>
+    <p class="lead">DXC watches platform and agent health continuously, keeps SOPs current through a feedback loop, and runs security on a fixed cadence — not a one-off at handover.</p>
+    <div class="grid g2 fade-seq">
+      <div class="why"><div class="ic">${icon('eye',24)}</div><div><h3>Continuous health monitoring</h3><p>DXC monitors platform and agent health around the clock, and supports every deployed persona, integration, and dashboard.</p></div></div>
+      <div class="why"><div class="ic">${icon('layers',24)}</div><div><h3>Two support models</h3><p>DXC-supported customers get this through managed services. Self-implemented customers use platform support plus the developer community.</p></div></div>
+      <div class="why"><div class="ic">${icon('bell',24)}</div><div><h3>A clear escalation path</h3><p>Set at go-live: human operators → capability owners → platform engineering. SLAs, tiers, and named contacts are agreed per engagement.</p></div></div>
+      <div class="why"><div class="ic">${icon('spark',24)}</div><div><h3>Continuous enhancement</h3><p>DXC develops new capabilities and runs a regular security review that mirrors the go-live Testing gate. New roadmap personas onboard through the same governed lifecycle.</p></div></div>
+    </div>
+    <small class="src">Source: OASIS Sales Playbook — Support Methodology (Part B, B6).</small>
+  </div>
+</section>`});
+
+/* ---------- 8. CHANGE MANAGEMENT ---------- */
+slides.push({nav:'Change Mgmt', html:`
+<section class="slide">
+  <div class="wrap">
+    <div class="eyebrow"><b>Delivering OASIS</b> · Change Management</div>
+    <h2>New software joins the estate without a rebuild.</h2>
+    <p class="lead">The Master Orchestrator is vendor-agnostic by design. New tools, agents, and data sources onboard through one governed lifecycle — not a bespoke integration project every time.</p>
+    <div class="card pad-lg">
+      <div class="pill-motif"><span class="lbl">${icon('link',15)} New software</span><span class="track"></span><span class="lbl">Governed capability ${icon('shield',15)}</span></div>
+      <div class="spine">
+        <div class="step"><div class="num">1</div><h3>Discover</h3><p>Identify the new software, its API/MCP surface, and the use case it serves.</p></div>
+        <div class="step"><div class="num">2</div><h3>Register</h3><p>Add it to the agent framework, registry, and CMS; define which agent(s) may call it.</p></div>
+        <div class="step gate"><div class="num">${icon('pause',18,2)}</div><h3>Guardrail &amp; test</h3><p>Set the guardrail policy for the new integration — autonomous vs. approval-gated — and validate in staging.</p></div>
+        <div class="step"><div class="num">4</div><h3>Promote</h3><p>Release to production behind the same phased rollout and adoption tracking as any other capability.</p></div>
+      </div>
+    </div>
+    <div class="grid g3 fade-seq" style="margin-top:16px">
+      <div class="card"><h3 style="display:flex;align-items:center;gap:9px">${icon('link',20)} Vendor-agnostic by design</h3><p class="muted" style="margin:0;font-size:13px">Integrates agents and tools from AWS, Azure, GCP, other vendors, or customer-built, across on-prem and cloud. No rip-and-replace.</p></div>
+      <div class="card"><h3 style="display:flex;align-items:center;gap:9px">${icon('users',20)} Stakeholder alignment</h3><p class="muted" style="margin:0;font-size:13px">The teams whose SOPs are touched by the new integration join the Discover and Register steps, not just IT.</p></div>
+      <div class="card"><h3 style="display:flex;align-items:center;gap:9px">${icon('shield',20)} Governed, not ad hoc</h3><p class="muted" style="margin:0;font-size:13px">Every new integration inherits the same guardrail policy, approval gates, and audit trail as day-one capabilities.</p></div>
+    </div>
+    <small class="src">Source: OASIS Sales Playbook — Change Management Methodology; Implementation Methodology (Part B, B3).</small>
+  </div>
+</section>`});
+
+/* ---------- 9. CYBERSECURITY ---------- */
+slides.push({nav:'Cybersecurity', html:`
+<section class="slide">
+  <div class="wrap">
+    <div class="eyebrow"><b>Delivering OASIS</b> · Cybersecurity Methodology</div>
+    <h2>Security is a gate, not a bolt-on.</h2>
+    <p class="lead">It governs what the agent may do from day one, and it's revisited on a fixed cadence once OASIS is live — the direct answer to "what if the AI makes a mistake we can't reverse?"</p>
+    <div class="grid g2 fade-seq">
+      <div class="why"><div class="ic">${icon('shield',24)}</div><div><h3>Security review as a delivery gate</h3><p>A formal review sits at the Testing phase, before Deployment, and recurs on a regular cadence after go-live.</p></div></div>
+      <div class="why"><div class="ic">${icon('check',24)}</div><div><h3>Guardrail &amp; access governance</h3><p>Least-privilege authenticated access for guarded execution. The guardrail policy defines what runs autonomously, what needs approval, and the hard limits.</p></div></div>
+      <div class="why"><div class="ic">${icon('alert',24)}</div><div><h3>Fail-safe by design</h3><p>Guardrails block the worst failures. When the agent is uncertain or lacks authority, it escalates to a human rather than proceeding.</p></div></div>
+      <div class="why"><div class="ic">${icon('eye',24)}</div><div><h3>Traceability &amp; audit</h3><p>Every action is recorded: what was recommended, why, the data used, the outcome — the evidence trail for frameworks like PCI or SOC 2, as applicable.</p></div></div>
+    </div>
+    <small class="src">Source: OASIS Sales Playbook — Cybersecurity Methodology; Recovery Methodology (Part B, B5).</small>
+  </div>
+</section>`});
+
+/* ---------- 10. WHY DIFFERENT ---------- */
 slides.push({nav:'Why OASIS', html:`
 <section class="slide">
   <div class="wrap">
@@ -872,7 +931,7 @@ slides.push({nav:'Why OASIS', html:`
   </div>
 </section>`});
 
-/* ---------- 8. CLOSE ---------- */
+/* ---------- 11. CLOSE ---------- */
 slides.push({nav:'Close', html:`
 <section class="slide">
   <div class="wrap">
@@ -1162,7 +1221,7 @@ async function tamGo(){
 }
 
 /* ============================================================
-   SLIDE 8 — close
+   SLIDE 11 — close
    ============================================================ */
 function closeWire(){
   document.getElementById('closeRestart').onclick=()=>{show(1);};
@@ -1186,7 +1245,7 @@ const onEnter={
   4(){ if(!onEnter._4){onEnter._4=1;luxModalWire();document.getElementById('luxReset').onclick=luxReset;luxReset();} },
   5(){ if(!onEnter._5){onEnter._5=1;document.getElementById('awsStep1').onclick=awsStep1;document.getElementById('awsStep2').onclick=awsStep2;document.getElementById('awsReset').onclick=awsReset;} },
   6(){ if(!onEnter._6){onEnter._6=1;document.getElementById('tamGo').onclick=tamGo;document.getElementById('tamReset').onclick=tamReset;} },
-  8(){ if(!onEnter._8){onEnter._8=1;closeWire();} }
+  11(){ if(!onEnter._11){onEnter._11=1;closeWire();} }
 };
 
 ['luxLog','awsLog','tamLog'].forEach(id=>{const n=document.getElementById(id);if(n){n.setAttribute('aria-live','polite');n.setAttribute('aria-atomic','false');}});
