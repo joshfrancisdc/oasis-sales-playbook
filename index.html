@@ -383,6 +383,12 @@ small.src{display:block;margin-top:14px;font-size:11.5px;color:var(--faint);font
   .dash{border-right:none;border-bottom:1px solid var(--line);max-height:230px}
   .spine .step::after{display:none}
   #rail .dots{display:none}
+  /* stacked dash+chat: stop forcing .app to a squeezed flex height (it clips
+     content with no reachable scroll) — let it grow to content and ride the
+     slide's own scroll instead, like every other tall slide already does */
+  .app{flex:none!important;min-height:0!important;max-height:none!important}
+  .chat{min-height:0}
+  .chat-log{max-height:44vh;overflow-y:auto}
 }
 /* ---------- Phone ---------- */
 @media(max-width:560px){
@@ -418,6 +424,10 @@ small.src{display:block;margin-top:14px;font-size:11.5px;color:var(--faint);font
   .plan-actions{flex-wrap:wrap;row-gap:8px}
   .playbtn{min-height:40px}
   .fu{min-height:38px}
+  /* CIO: button + growing status text can't safely share a row this narrow */
+  .cio-trigger-row{flex-direction:column;align-items:flex-start!important;gap:10px!important}
+  .alert-banner{align-items:flex-start}
+  .alert-banner .bell{flex:none}
 }
 .fade-seq>*{opacity:0;transform:translateY(10px);animation:rise .5s ease forwards}
 .fade-seq>*:nth-child(1){animation-delay:.05s}.fade-seq>*:nth-child(2){animation-delay:.15s}
@@ -695,7 +705,7 @@ slides.push({nav:'CIO', html:`
         <div class="bell">${icon('bell',24,1.8)}</div>
         <div class="txt"><b>Issue detected</b> — Flight Operations scheduling potentially impacted in <span class="countdown" id="cioClock">04:00:00</span> due to an infrastructure capacity issue.</div>
       </div>
-      <div style="display:flex;gap:12px;align-items:center;margin-bottom:16px">
+      <div class="cio-trigger-row" style="display:flex;gap:12px;align-items:center;margin-bottom:16px">
         <button class="playbtn" id="cioTrigger">▶ Trigger the alert</button>
         <span class="muted" style="font-size:13px" id="cioNote">Fires on the CIO's curated dashboard — tagged straight to Pacific Skyways · Flight Operations.</span>
       </div>
